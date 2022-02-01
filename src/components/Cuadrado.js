@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import "../styles/Cuadrado-Style.css"
 export default function Cuadrado(props){
+    let color = "#FF9136"
     const[valor, setValor] =  useState("")
     const[activo,setActivo] = useState(false)
     function handleChange(e){
@@ -9,8 +10,8 @@ export default function Cuadrado(props){
             handleRigthChange(e)
         }else{
             setActivo(prev=>!prev)
-            activo ? e.target.style.backgroundColor = "white":e.target.style.backgroundColor = "#372937";
-            activo ? e.target.style.color = "#372937":e.target.style.color = "white";
+            activo ? e.target.style.backgroundColor = "white":e.target.style.backgroundColor = color;
+            activo ? e.target.style.color = "black":e.target.style.color = "white";
         }
         
     }
@@ -25,7 +26,7 @@ export default function Cuadrado(props){
        
     }
     return(
-        <div className='cuadrado' onClick={handleChange} onContextMenu={handleRigthChange}>
+        <div className='cuadrado' onClick={handleChange} onContextMenu={handleRigthChange} >
             <p>{valor}</p>
         </div>
     )
