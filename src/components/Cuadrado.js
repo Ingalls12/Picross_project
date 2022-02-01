@@ -3,7 +3,6 @@ import "../styles/Cuadrado-Style.css"
 export default function Cuadrado(props){
     const[valor, setValor] =  useState("")
     const[activo,setActivo] = useState(false)
-    const[activoR, setActivoR] = useState(false)
     function handleChange(e){
         
         if(valor==="X"){
