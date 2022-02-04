@@ -9,12 +9,12 @@ export default function HelperIzq(){
     for (const key in helper_izq) {
         helper_izq_array.push(helper_izq[key])
     }
-    const helper = helper_izq_array.map(e=>{
-      
+    const helper = helper_izq_array.map((e,i)=>{
         return(
-            <span>{e}</span>
+            <span key={i}>{e}</span>
         )
     })
+    
     return(
         <div className="div_izq">
             {helper}

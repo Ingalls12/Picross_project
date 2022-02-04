@@ -18,7 +18,7 @@ export default function Grilla(){
                 <div className="centro">
                     <div className="helper_izq" ><HelperIzq /></div>
                     <div className="grilla">{mostrar?<Plantilla key={"a"}/>:<Plantilla key={"b"}/>}</div>
-                    <HelperTop className="helper_top"/>
+                    <div className="helper_top"><HelperTop /></div>
                 </div>
             </gameContext.Provider>
             <button onClick={render}>Borrar</button>
