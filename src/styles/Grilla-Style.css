@@ -1,4 +1,29 @@
 .centro{
+    display: grid;
+    grid-template-columns: 30px 300px 30px;
+    grid-template-rows: 30px 300px;
+}
+.helper_izq{
+    grid-row: 2;
+    grid-column: 1;
+    
+}
+.div_izq{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+}
+.div_izq span{
+    padding: 7px;
+    letter-spacing: 5px;
+
+}
+
+.helper_top{
+    grid-row: 1;
+    grid-column: 2;
+    white-space: pre;
+}
+.grilla{
+    grid-row: 2;
+    grid-column: 2;
 }
