@@ -36,11 +36,13 @@ export default function Cuadrado(props){
         e.preventDefault();
         e.target.value= props.value
         if(!isCorrect(e)){
-            if(activo){
-                handleChange(e)
-            }else{
-                valor===""?setValor("X"):setValor("");
-            }
+           if(e.target.style.backgroundColor!="red"){
+                if(activo){
+                    handleChange(e)
+                }else{
+                    valor===""?setValor("X"):setValor("");
+                }
+           }
         }else{
             e.target.style.backgroundColor = color;
       
