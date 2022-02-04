@@ -1,9 +1,14 @@
 import Grilla from "./components/Grilla";
+
+import "./styles/app.css"
 function App() {
   return (
     <div className="App">
       <h1>Picross</h1>
-      <Grilla/>
+      <div className="principal">
+        <Grilla/>
+      </div>
+     
     </div>
   );
 }
