@@ -1,5 +1,5 @@
 import React,{useContext} from "react";
-import { gameContext } from "../gameContext";
+import { gameContext } from "../context/gameContext";
 import { contador,separacion } from "../../funciones/getHelpers";
 export default function HelperIzq(){
     const numeros = useContext(gameContext)

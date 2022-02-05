@@ -3,7 +3,7 @@ import Plantilla from "./Plantilla";
 import HelperIzq from "./helpers/HelperIzq"
 import HelperTop from "./helpers/HelperTop";
 import "../styles/Grilla-Style.css"
-import { gameContext } from "./gameContext";
+import { gameContext } from "./context/gameContext";
 import { listaReducer } from "../reducers/arrReducer";
 export default function Grilla(){
     const[mostrar,setMostrar]= useState(true);

@@ -1,6 +1,6 @@
 import React,{useContext} from "react";
 import Cuadrado from "./Cuadrado";
-import { gameContext } from "./gameContext";
+import { gameContext } from "./context/gameContext";
 import "../styles/Plantilla-Style.css"
 export default function Plantilla(){
     const lista = useContext(gameContext);

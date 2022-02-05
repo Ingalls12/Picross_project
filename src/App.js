@@ -3,17 +3,21 @@ import Grilla from "./components/Grilla";
 import { puntacionReducer } from "./reducers/puntuacionReducer";
 import "./styles/app.css";
 import Puntuacion from "./components/Puntuacion";
+import { poinstContext } from "./components/context/pointsContext";
 function App() {
-  const [puntaje,setPunaje] = useReducer(puntacionReducer,puntacionReducer())
+  const [puntaje,setPuntaje] = useReducer(puntacionReducer,puntacionReducer())
   const [puntos,setPuntos] = useState(puntaje)
+
   return (
-    <div className="App">
-      <h1>Picross</h1>
-      <div className="principal">
-        <Grilla />
+    <poinstContext.Provider value={{puntaje,setPuntaje}}>
+      <div className="App">
+        <h1>Picross</h1>
+        <div className="principal">
+          <Grilla />
+        </div>
+        <Puntuacion />
       </div>
-      <Puntuacion puntaje = {puntos}/>
-    </div>
+    </poinstContext.Provider>
   );
 }
 

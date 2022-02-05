@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { gameContext } from "../gameContext";
+import { gameContext } from "../context/gameContext";
 import { separacion,contador, transpuesta } from "../../funciones/getHelpers";
 export default function HelperTop(){
     let numeros = useContext(gameContext)

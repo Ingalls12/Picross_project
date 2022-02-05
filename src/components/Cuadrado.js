@@ -1,12 +1,15 @@
-import React,{useReducer, useState} from 'react';
-import "../styles/Cuadrado-Style.css"
+import React,{useContext, useState} from 'react';
+import "../styles/Cuadrado-Style.css";
 import { puntacionReducer } from '../reducers/puntuacionReducer';
+import { poinstContext } from './context/pointsContext';
 export default function Cuadrado(props){
     let color = "#FF9136"
     const[valor, setValor] =  useState("");
     const[activo,setActivo] = useState(false);
-
-    const [puntaje, dispatchPuntaje] = useReducer(puntacionReducer,puntacionReducer())
+    const state = useContext(poinstContext);
+    const res = state.puntaje;
+    const dispatcher = state.setPuntaje;
+    
     function handleChange(e){
         e.target.value= props.value;
         if(isCorrect(e)){
@@ -29,7 +32,7 @@ export default function Cuadrado(props){
             }else{
                 e.target.style.backgroundColor = "red";
                 e.target.activado = false;
-                dispatchPuntaje({type:"ERROR"})
+                dispatcher({type:"ERROR"})
             }
            
         }
