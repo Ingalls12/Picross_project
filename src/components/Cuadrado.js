@@ -12,9 +12,10 @@ export default function Cuadrado(props){
     
             }else{
                 setActivo(prev=>!prev)
-                activo ? e.target.style.backgroundColor = "white":e.target.style.backgroundColor = color;
+                /* activo ? e.target.style.backgroundColor = "white":e.target.style.backgroundColor = color;
                 activo ? e.target.style.color = "black":e.target.style.color = "white";
-                activo ? e.target.value = props.numero:e.target.value= props.value;
+                activo ? e.target.value = props.numero:e.target.value= props.value; */
+                e.target.style.backgroundColor = color;
                 e.target.activado = true;
             }
         }else{
