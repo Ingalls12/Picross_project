@@ -33,7 +33,7 @@ export default function Cuadrado(props){
         
     }
     function isCorrect(e){
-        if(e.target.value==1){
+        if(e.target.value===1){
             return true
         }else{
             return false
@@ -44,7 +44,7 @@ export default function Cuadrado(props){
         e.preventDefault();
         e.target.value= props.value
         if(!isCorrect(e)){
-           if(e.target.style.backgroundColor!="red"){
+           if(e.target.style.backgroundColor!=="red"){
                 if(activo){
                     handleChange(e)
                 }else{
