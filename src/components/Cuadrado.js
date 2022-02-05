@@ -23,6 +23,7 @@ export default function Cuadrado(props){
                 activo ? e.target.value = props.numero:e.target.value= props.value; */
                 e.target.style.backgroundColor = color;
                 e.target.activado = true;
+                dispatcher({type:"POINT"})
             }
         }else{
             
