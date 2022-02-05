@@ -6,7 +6,7 @@ const initialState = ()=>({
 const listaReducer = (state = initialState(),action = {})=>{
     switch(action.type){
         case "NEW":
-            return {lista:random_list()}
+            return {list:random_list()}
         default:
             return state;
     }

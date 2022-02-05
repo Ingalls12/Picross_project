@@ -38,11 +38,14 @@
     top: 13px;
     left: 42.7%;
     height: 100%;
+    width: 100%;
     max-height: 90px;
+    max-width: 304px;
+    
 }
 
 .div_top span{
-    padding: 8px;
+    padding: 6px;
     letter-spacing: 6px;
     display: flex;
     align-items: flex-end;
@@ -51,4 +54,17 @@
 .grilla{
     grid-row: 2;
     grid-column: 2;
+    position: absolute;
+    top: 16.5%;
+    left: 36%;
+}
+.btn_borrar{
+    position: absolute;
+    top: 80%;
+    left: 45%;
+}
+.btn_nuevo{
+    position: absolute;
+    top: 80%;
+    left: 50%;
 }
