@@ -15,13 +15,20 @@ export default function Cuadrado(props){
                 activo ? e.target.style.backgroundColor = "white":e.target.style.backgroundColor = color;
                 activo ? e.target.style.color = "black":e.target.style.color = "white";
                 activo ? e.target.value = props.numero:e.target.value= props.value;
-             
-                
+                e.target.activado = true;
             }
         }else{
-            e.target.style.backgroundColor = "red"
+            
+            if(e.target.innerText==="X"){
+                e.target.style.backgroundColor = "white";
+                e.target.innerText ="";
+            }else{
+                e.target.style.backgroundColor = "red";
+                e.target.activado = false;
+            }
+           
         }
-        
+        console.log(e.target)
         
     }
     function isCorrect(e){
