@@ -12,9 +12,13 @@ export default function Grilla(props){
 
     const [array, arrayDispatcher] = useReducer(listaReducer,listaReducer())
     function new_Puzzle(){
+        borrar()
         arrayDispatcher({type:"NEW"})
     }
     useEffect(new_Puzzle,[])
+    function borrar(){
+        setMostrar(prev=>!prev)
+    }
 
 
     return(
@@ -26,7 +30,7 @@ export default function Grilla(props){
                     <div className="helper_top"><HelperTop /></div>
                 </div>
             </gameContext.Provider>
-            <button className="btn_borrar" onClick={()=>{setMostrar(prev=>!prev)}}>Borrar</button>
+            <button className="btn_borrar" onClick={borrar}>Borrar</button>
             <button className="btn_nuevo" onClick={new_Puzzle}>Nuevo Puzzle</button>
         </>
     )
