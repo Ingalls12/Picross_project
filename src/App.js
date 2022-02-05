@@ -1,13 +1,19 @@
+import { useReducer } from "react";
 import Grilla from "./components/Grilla";
-import {random_list} from "./funciones/getRandomArray";
-import "./styles/app.css"
+import { listaReducer } from "./reducers/arrReducer";
+import "./styles/app.css";
+
 function App() {
-  const lista = random_list()
+  const [arreglo, arregloDispatcher] = useReducer(listaReducer,listaReducer())
+  const respuesta =()=>arregloDispatcher({type:"NEW"})
+
+  console.log(respuesta)
+  console.log(arreglo);
   return (
     <div className="App">
       <h1>Picross</h1>
       <div className="principal">
-        <Grilla lista = {lista}/>
+        <Grilla lista = {arreglo.list}/>
       </div>
      
     </div>
