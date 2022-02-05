@@ -15,7 +15,7 @@ function App() {
       <div className="principal">
         <Grilla lista = {arreglo.list}/>
       </div>
-     
+
     </div>
   );
 }
