@@ -6,10 +6,12 @@ import "../styles/Grilla-Style.css"
 import { gameContext } from "./context/gameContext";
 import { listaReducer } from "../reducers/arrReducer";
 import { poinstContext } from "./context/pointsContext";
+import {countSquares} from "../funciones/getCountSquares";
 export default function Grilla(){
     const[mostrar,setMostrar]= useState(true);
     const state = useContext(poinstContext)
     const dispatcher = state.setPuntaje;
+    const puntos = state.puntaje;
     const [array, arrayDispatcher] = useReducer(listaReducer,listaReducer())
     function new_Puzzle(){
         borrar()
@@ -21,7 +23,8 @@ export default function Grilla(){
         setMostrar(prev=>!prev);
         dispatcher({type:"NEW_GAME"});
     }
-
+    const puntosTotales = countSquares(array.list);
+    console.log(puntos.puntos,puntosTotales)
     return(
         <>
             <gameContext.Provider value={array.list}>
@@ -33,6 +36,7 @@ export default function Grilla(){
             </gameContext.Provider>
             <button className="btn_borrar" onClick={borrar}>Borrar</button>
             <button className="btn_nuevo" onClick={new_Puzzle}>Nuevo Puzzle</button>
+            {puntos.puntos == puntosTotales ? <div className="ganaste_mensaje">  Felicidades haz ganado</div>:<></>}
         </>
     )
 }
