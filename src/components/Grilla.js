@@ -1,22 +1,25 @@
-import React,{useEffect, useReducer, useState} from "react";
+import React,{useContext, useEffect, useReducer, useState} from "react";
 import Plantilla from "./Plantilla";
 import HelperIzq from "./helpers/HelperIzq"
 import HelperTop from "./helpers/HelperTop";
 import "../styles/Grilla-Style.css"
 import { gameContext } from "./context/gameContext";
 import { listaReducer } from "../reducers/arrReducer";
+import { poinstContext } from "./context/pointsContext";
 export default function Grilla(){
     const[mostrar,setMostrar]= useState(true);
-   
-
+    const state = useContext(poinstContext)
+    const dispatcher = state.setPuntaje;
     const [array, arrayDispatcher] = useReducer(listaReducer,listaReducer())
     function new_Puzzle(){
         borrar()
-        arrayDispatcher({type:"NEW"})
-    }
+        arrayDispatcher({type:"NEW"});
+        dispatcher({type:"NEW_GAME"});
+    }   
     useEffect(new_Puzzle,[])
     function borrar(){
-        setMostrar(prev=>!prev)
+        setMostrar(prev=>!prev);
+        dispatcher({type:"NEW_GAME"});
     }
 
     return(
