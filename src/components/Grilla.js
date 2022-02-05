@@ -9,7 +9,9 @@ import { poinstContext } from "./context/pointsContext";
 import {countSquares} from "../funciones/getCountSquares";
 export default function Grilla(){
     const[mostrar,setMostrar]= useState(true);
-    const state = useContext(poinstContext)
+    const[ganaste, setGanaste] = useState(false);
+    const[perdiste, setPerdiste] = useState(false);
+    const state = useContext(poinstContext);
     const dispatcher = state.setPuntaje;
     const puntos = state.puntaje;
     const [array, arrayDispatcher] = useReducer(listaReducer,listaReducer())
@@ -20,17 +22,24 @@ export default function Grilla(){
     }   
     useEffect(new_Puzzle,[])
     function borrar(){
+        setGanaste(false);
+        setPerdiste(false);
         setMostrar(prev=>!prev);
         dispatcher({type:"NEW_GAME"});
     }
     const puntosTotales = countSquares(array.list);
-    console.log(puntos.puntos,puntosTotales)
-    let ganaste = false;
+    console.log(puntos.vidas)
     useEffect(()=>{
-        if(puntos.puntos == puntosTotales){
-            ganaste = true
+        if(puntos.puntos === puntosTotales&& puntos.vidas>0){
+            console.log("entro")
+            setGanaste(true)
         }
-    })
+        if(puntos.vidas<1){
+            console.log("entro a perdiste")
+            setPerdiste(true);
+
+        }
+    },[puntos.puntos,puntos.vidas])
     return(
         <>
             <gameContext.Provider value={array.list}>
@@ -42,7 +51,8 @@ export default function Grilla(){
             </gameContext.Provider>
             <button className="btn_borrar" onClick={borrar}>Borrar</button>
             <button className="btn_nuevo" onClick={new_Puzzle}>Nuevo Puzzle</button>
-            {ganaste ? <div className="ganaste_mensaje">  Felicidades haz ganado</div>:<></>}
+            {ganaste ? <div className="ganaste_mensaje"> Felicidades haz ganado</div>:<></>}
+            {perdiste ? <div className="perdiste_mensaje"> Haz perdido </div>:<></>}
         </>
     )
 }

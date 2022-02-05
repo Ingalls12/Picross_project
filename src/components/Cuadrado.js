@@ -34,9 +34,14 @@ export default function Cuadrado(props){
                 e.target.style.backgroundColor = "white";
                 e.target.innerText ="";
             }else{
-                e.target.style.backgroundColor = "red";
+                if(!(e.target.style.backgroundColor==="red")){
+                    e.target.style.backgroundColor = "red";
                 e.target.activado = false;
                 dispatcher({type:"ERROR"})
+                }else{
+                    e.target.activado = false;
+                }
+                
             }
            
         }
