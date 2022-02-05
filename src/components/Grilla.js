@@ -2,6 +2,7 @@ import React,{useState, useContext} from "react";
 import Plantilla from "./Plantilla";
 import HelperIzq from "./helpers/HelperIzq"
 import HelperTop from "./helpers/HelperTop";
+import {random_list} from "../funciones/getRandomArray"
 import "../styles/Grilla-Style.css"
 import { gameContext } from "./gameContext";
 export default function Grilla(){
@@ -11,7 +12,7 @@ export default function Grilla(){
         setMostrar(prev=>!prev)
        
     }
-    const lista = [ 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1];
+    const lista = random_list();
     return(
         <>
             <gameContext.Provider value={lista}>
