@@ -1,11 +1,11 @@
-import React, { useReducer } from "react";
+import React, { useReducer,useState } from "react";
 import { puntacionReducer } from "../reducers/puntuacionReducer";
 export default function Puntuacion(){
-    const [puntuacion, puntacionDispatcher] = useReducer(puntacionReducer,puntacionReducer());
+    const [state, dispatchState] = useReducer(puntacionReducer, puntacionReducer())
     return(
         <>
-            <div>Puntos: {puntuacion.puntos}</div>
-            <div>Vidas: {puntuacion.vidas}</div>
+            <div>Puntos: {state.puntos}</div>
+            <div>Vidas: {state.vidas}</div>
         </>
     )
 }

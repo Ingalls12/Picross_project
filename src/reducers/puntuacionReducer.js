@@ -6,9 +6,9 @@ const initialState =()=>({
 const puntacionReducer = (state = initialState(),action={})=>{
     switch(action.type){
         case "POINT":
-            return{...state, puntos: state.puntos+1}
+            return{...state, puntos: state.puntos + 1}
         case "ERROR":
-            return{...state, vidas: state.vidas - 1}
+            return {...state, vidas: state.vidas - 1};
         default:
             return state;
     }

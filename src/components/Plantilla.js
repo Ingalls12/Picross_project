@@ -3,11 +3,10 @@ import Cuadrado from "./Cuadrado";
 import { gameContext } from "./gameContext";
 import "../styles/Plantilla-Style.css"
 export default function Plantilla(){
-    
     const lista = useContext(gameContext);
     return <div className="grilla">{lista.map((e,i)=>{
         return(
-            <Cuadrado key={i} numero ={i+1} value = {e}/>
+            <Cuadrado key={i} numero ={i+1} value = {e} />
         )
         } )}</div>;
     }

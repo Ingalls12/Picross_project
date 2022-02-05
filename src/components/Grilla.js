@@ -5,10 +5,9 @@ import HelperTop from "./helpers/HelperTop";
 import "../styles/Grilla-Style.css"
 import { gameContext } from "./gameContext";
 import { listaReducer } from "../reducers/arrReducer";
-export default function Grilla(props){
+export default function Grilla(){
     const[mostrar,setMostrar]= useState(true);
-    const [juego, setJuego] = useState([]);
-    const lista = props.lista;
+   
 
     const [array, arrayDispatcher] = useReducer(listaReducer,listaReducer())
     function new_Puzzle(){
@@ -20,13 +19,12 @@ export default function Grilla(props){
         setMostrar(prev=>!prev)
     }
 
-
     return(
         <>
             <gameContext.Provider value={array.list}>
                 <div className="centro">
                     <div className="helper_izq" ><HelperIzq /></div>
-                    <div className="grilla">{mostrar?<Plantilla key={"a"}/>:<Plantilla key={"b"}/>}</div>
+                    <div className="grilla">{mostrar?<Plantilla key={"a"} />:<Plantilla key={"b"} />} </div>
                     <div className="helper_top"><HelperTop /></div>
                 </div>
             </gameContext.Provider>

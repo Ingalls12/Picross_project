@@ -1,9 +1,12 @@
-import React,{useState} from 'react';
+import React,{useReducer, useState} from 'react';
 import "../styles/Cuadrado-Style.css"
+import { puntacionReducer } from '../reducers/puntuacionReducer';
 export default function Cuadrado(props){
     let color = "#FF9136"
-    const[valor, setValor] =  useState("")  
-    const[activo,setActivo] = useState(false)
+    const[valor, setValor] =  useState("");
+    const[activo,setActivo] = useState(false);
+
+    const [puntaje, dispatchPuntaje] = useReducer(puntacionReducer,puntacionReducer())
     function handleChange(e){
         e.target.value= props.value;
         if(isCorrect(e)){
@@ -26,10 +29,11 @@ export default function Cuadrado(props){
             }else{
                 e.target.style.backgroundColor = "red";
                 e.target.activado = false;
+                dispatchPuntaje({type:"ERROR"})
             }
            
         }
-        console.log(e.target)
+     
         
     }
     function isCorrect(e){
