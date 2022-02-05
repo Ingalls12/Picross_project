@@ -6,9 +6,9 @@ export default function Puntuacion(){
     const valor = state.puntaje;
     
     return(
-        <>
+        <div className="puntuacion">
             <div>Puntos: {valor.puntos}</div>
             <div>Vidas: {valor.vidas}</div>
-        </>
+        </div>
     )
 }

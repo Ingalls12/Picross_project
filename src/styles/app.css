@@ -1,5 +1,11 @@
+@font-face{
+    src: url("../fonts/Rowdies-Bold.ttf");
+    font-family: rowdies;
+}
+*{
+    font-family: rowdies;
+}
 .principal{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+ position: absolute;
+ left: 27%;
 }

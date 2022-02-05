@@ -2,23 +2,28 @@
     display: grid;
     grid-template-columns: 30px 300px 30px;
     grid-template-rows: 30px 300px;
+    position: absolute;
+    top: 0%;
+    left: 28%;
 }
 .helper_izq{
     grid-row: 2;
     grid-column: 1;
+    
     
 }
 .div_izq{
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 37.5%;
+    top: 43%;
+    left: 50%;
     width: 100%;
     max-width: 90px;
     
 }
 .div_izq span{
-    padding: 7px;
+    padding: 5.8px;
     letter-spacing: 5px;
     display: flex;
     justify-content: flex-end;
@@ -34,9 +39,10 @@
 .div_top{
     display: flex;
     flex-direction: row;
+    gap: 19px;
     position: absolute;
-    top: 13px;
-    left: 42.7%;
+    top: 12%;
+    left: 80%;
     height: 100%;
     width: 100%;
     max-height: 90px;
@@ -45,11 +51,6 @@
 }
 
 .div_top span{
-    padding-left: 6px;
-    padding-right: 6px ;
-    margin-left: 5px;
-    margin-right: 5px;
-    initial-letter-align: inherit;
     display: flex;
     align-items: flex-end;
     
@@ -58,16 +59,16 @@
     grid-row: 2;
     grid-column: 2;
     position: absolute;
-    top: 56px;
+    top: 3.5em;
     left: 36%;
 }
 .btn_borrar{
-    position: absolute;
-    top: 50%;
-    left: 45%;
+    position: relative;
+    top: 36em;
+    left: 31em;
 }
 .btn_nuevo{
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    position: relative;
+    top: 36em;
+    left: 32em;
 }
