@@ -25,6 +25,12 @@ export default function Grilla(){
     }
     const puntosTotales = countSquares(array.list);
     console.log(puntos.puntos,puntosTotales)
+    let ganaste = false;
+    useEffect(()=>{
+        if(puntos.puntos == puntosTotales){
+            ganaste = true
+        }
+    })
     return(
         <>
             <gameContext.Provider value={array.list}>
@@ -36,7 +42,7 @@ export default function Grilla(){
             </gameContext.Provider>
             <button className="btn_borrar" onClick={borrar}>Borrar</button>
             <button className="btn_nuevo" onClick={new_Puzzle}>Nuevo Puzzle</button>
-            {puntos.puntos == puntosTotales ? <div className="ganaste_mensaje">  Felicidades haz ganado</div>:<></>}
+            {ganaste ? <div className="ganaste_mensaje">  Felicidades haz ganado</div>:<></>}
         </>
     )
 }
