@@ -37,7 +37,7 @@ export default function Cuadrado(props){
                 if(!(e.target.style.backgroundColor==="red")){
                     e.target.style.backgroundColor = "red";
                 e.target.activado = false;
-                dispatcher({type:"ERROR"})
+                dispatcher({type:"ERROR"});
                 }else{
                     e.target.activado = false;
                 }
@@ -68,6 +68,7 @@ export default function Cuadrado(props){
                 }
            }
         }else{
+            dispatcher({type:"ERROR"});
             e.target.style.backgroundColor = color;
       
         }
