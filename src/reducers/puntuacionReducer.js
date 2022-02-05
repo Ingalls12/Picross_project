@@ -9,6 +9,8 @@ const puntacionReducer = (state = initialState(),action={})=>{
             return{...state, puntos: state.puntos + 1}
         case "ERROR":
             return {...state, vidas: state.vidas - 1};
+        case "NEW":
+            return {initialState}
         default:
             return state;
     }
