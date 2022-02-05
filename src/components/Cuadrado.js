@@ -2,6 +2,7 @@ import React,{useContext, useState} from 'react';
 import "../styles/Cuadrado-Style.css";
 import { puntacionReducer } from '../reducers/puntuacionReducer';
 import { poinstContext } from './context/pointsContext';
+import { getNextKeyDef } from '@testing-library/user-event/dist/keyboard/getNextKeyDef';
 export default function Cuadrado(props){
     let color = "#FF9136"
     const[valor, setValor] =  useState("");
@@ -22,8 +23,10 @@ export default function Cuadrado(props){
                 activo ? e.target.style.color = "black":e.target.style.color = "white";
                 activo ? e.target.value = props.numero:e.target.value= props.value; */
                 e.target.style.backgroundColor = color;
+                if(!e.target.activado){
+                    dispatcher({type:"POINT"})
+                }
                 e.target.activado = true;
-                dispatcher({type:"POINT"})
             }
         }else{
             
