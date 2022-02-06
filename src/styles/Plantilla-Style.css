@@ -3,3 +3,7 @@
     grid-template-columns: repeat(10,30px);
     gap: 0;
 }
+.titulo{
+    text-indent: 1em;
+    font-size: 3.5em;
+}

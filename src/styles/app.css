@@ -5,6 +5,9 @@
 *{
     font-family: rowdies;
 }
+body{
+    background-color: #567E7E;
+}
 .principal{
  position: absolute;
  left: 27%;

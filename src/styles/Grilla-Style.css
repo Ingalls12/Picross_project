@@ -67,12 +67,25 @@
     left: 36%;
 }
 .btn_borrar{
+    border: solid 0.1px black;
+    background-color: #045858;
+
+    width: 8em;
+    height: 3em;
+    
     position: relative;
     top: 36em;
-    left: 31em;
+    left: 28em;
+    
 }
 .btn_nuevo{
+    border: solid 0.1px black;
+    background-color: #045858;
+
+    width: 10em;
+    height: 3em;
+
     position: relative;
     top: 36em;
-    left: 32em;
+    left: 29em;
 }

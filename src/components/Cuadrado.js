@@ -4,7 +4,8 @@ import { puntacionReducer } from '../reducers/puntuacionReducer';
 import { poinstContext } from './context/pointsContext';
 import { getNextKeyDef } from '@testing-library/user-event/dist/keyboard/getNextKeyDef';
 export default function Cuadrado(props){
-    let color = "#FF9136"
+    let color = "#131A1A";
+    let error = "#83062C"
     const[valor, setValor] =  useState("");
     const[activo,setActivo] = useState(false);
     const state = useContext(poinstContext);
@@ -31,15 +32,15 @@ export default function Cuadrado(props){
         }else{
             
             if(e.target.innerText==="X"){
-                e.target.style.backgroundColor = "white";
+                e.target.style.backgroundColor = color;
                 e.target.innerText ="";
             }else{
-                if(!(e.target.style.backgroundColor==="red")){
-                    e.target.style.backgroundColor = "red";
-                    e.target.activado = false;
+                if(!(e.target.style.backgroundColor===error)){
+                    e.target.style.backgroundColor = error;
+                    e.target.activado = true;
                     dispatcher({type:"ERROR"});
                 }else{
-                    e.target.activado = false;
+                    e.target.activado = true;
                 }
                 
             }
@@ -60,11 +61,15 @@ export default function Cuadrado(props){
         e.preventDefault();
         e.target.value= props.value
         if(!isCorrect(e)){
-           if(e.target.style.backgroundColor!=="red"){
+           if(!(e.target.style.backgroundColor===error)){
+               
                 if(activo){
                     handleChange(e)
                 }else{
-                    valor===""?setValor("X"):setValor("");
+                    if(!e.target.activado){
+                        valor===""?setValor("X"):setValor("");
+                    }
+                    
                 }
            }
         }else if(e.target.activado){
