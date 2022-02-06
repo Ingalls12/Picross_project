@@ -1,3 +1,8 @@
+
+.juego{
+    position: absolute;
+    display: flex;
+}
 .centro{
     display: grid;
     grid-template-columns: 30px 300px 30px;
@@ -88,4 +93,19 @@
     position: relative;
     top: 36em;
     left: 29em;
+}
+
+.ganaste_mensaje{
+    position: relative;
+    left: 14em;
+    top: 5em;
+    font-size: 3em;
+    float: right;
+}
+.perdiste_mensaje{
+    position: relative;
+    left: 14em;
+    top: 5em;
+    font-size: 3em;
+    float: right;
 }
