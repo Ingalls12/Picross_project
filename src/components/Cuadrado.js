@@ -1,8 +1,6 @@
 import React,{useContext, useState} from 'react';
 import "../styles/Cuadrado-Style.css";
-import { puntacionReducer } from '../reducers/puntuacionReducer';
 import { poinstContext } from './context/pointsContext';
-import { getNextKeyDef } from '@testing-library/user-event/dist/keyboard/getNextKeyDef';
 export default function Cuadrado(props){
     let color = "#131A1A";
     let error = "#83062C"

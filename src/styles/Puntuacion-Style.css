@@ -1,7 +1,8 @@
 .puntuacion{
     display: flex;
     flex-direction: column;
-    text-indent: 3.5em;
+    text-indent: 3em;
+    font-size: 1.5em;
 }
 .vidas{
     display: flex;

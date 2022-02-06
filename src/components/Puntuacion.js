@@ -25,7 +25,7 @@ export default function Puntuacion(){
     return(
         <div className="puntuacion">
             <div>Puntos: {valor.puntos}</div>
-            <div className="puntuacion">Vidas:<span className="vidas">{vidas}</span> </div>
+            <div >Vidas:<span className="vidas">{vidas}</span> </div>
         </div>
     )
 }

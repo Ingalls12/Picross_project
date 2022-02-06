@@ -4,6 +4,7 @@ import { puntacionReducer } from "./reducers/puntuacionReducer";
 import "./styles/app.css";
 import Puntuacion from "./components/Puntuacion";
 import { poinstContext } from "./components/context/pointsContext";
+import Instrucciones from "./components/Instrucciones";
 function App() {
   const [puntaje,setPuntaje] = useReducer(puntacionReducer,puntacionReducer());
   return (
@@ -14,6 +15,7 @@ function App() {
           <Grilla />
         </div>
         <Puntuacion />
+        <Instrucciones/>
       </div>
     </poinstContext.Provider>
   );

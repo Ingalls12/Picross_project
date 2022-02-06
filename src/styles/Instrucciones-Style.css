@@ -1,0 +1,21 @@
+.instrucciones{
+    position: absolute;
+    left: 3em;
+    top: 10em;
+    font-size: 1.5em;
+}
+.insc_clk_izq{
+    margin: 2em;
+    display: flex;
+    gap: 2em;
+
+}
+.insc_clk_drc{
+   
+    margin: 2.5em;
+    display: flex;
+    gap: 2em;
+}
+.img-instruccion{
+    width: 4em;
+}
