@@ -102,10 +102,12 @@
     font-size: 3em;
     float: right;
 }
+
 .perdiste_mensaje{
     position: relative;
     left: 14em;
     top: 5em;
     font-size: 3em;
     float: right;
+    transition: transform 1000ms;
 }
