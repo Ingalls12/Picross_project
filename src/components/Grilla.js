@@ -28,16 +28,14 @@ export default function Grilla(){
         dispatcher({type:"NEW_GAME"});
     }
     const puntosTotales = countSquares(array.list);
-    console.log(puntos.vidas)
+    
     useEffect(()=>{
-        if(puntos.puntos === puntosTotales&& puntos.vidas>0){
-            console.log("entro")
+        if(puntos.puntos === puntosTotales && puntos.vidas>0){
             setGanaste(true)
+            console.log("Ganaste")
         }
-        if(puntos.vidas<1){
-            console.log("entro a perdiste")
+        if(puntos.vidas<1&&puntos.puntos < puntosTotales){
             setPerdiste(true);
-
         }
     },[puntos.puntos,puntos.vidas])
     return(

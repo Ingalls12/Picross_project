@@ -36,8 +36,8 @@ export default function Cuadrado(props){
             }else{
                 if(!(e.target.style.backgroundColor==="red")){
                     e.target.style.backgroundColor = "red";
-                e.target.activado = false;
-                dispatcher({type:"ERROR"});
+                    e.target.activado = false;
+                    dispatcher({type:"ERROR"});
                 }else{
                     e.target.activado = false;
                 }
@@ -50,9 +50,9 @@ export default function Cuadrado(props){
     }
     function isCorrect(e){
         if(e.target.value===1){
-            return true
+            return true;
         }else{
-            return false
+            return false;
         }
        
     }
@@ -67,10 +67,10 @@ export default function Cuadrado(props){
                     valor===""?setValor("X"):setValor("");
                 }
            }
+        }else if(e.target.activado){
         }else{
             dispatcher({type:"ERROR"});
             e.target.style.backgroundColor = color;
-      
         }
         
         
