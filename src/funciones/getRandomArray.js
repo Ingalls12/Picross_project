@@ -4,6 +4,6 @@ function random_list(){
         let n_random = Math.random()*2;
         lista.push(Math.floor(n_random))
     }
-    return lista
+    return lista;
 }
 export {random_list}

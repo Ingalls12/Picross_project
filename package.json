@@ -34,5 +34,23 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "pricross in react",
+  "main": "App.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ingalls12/Picross_project.git"
+  },
+  "keywords": [
+    "picross",
+    "react",
+    "game"
+  ],
+  "author": "Leonardo Ingalls Hernández",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ingalls12/Picross_project/issues"
+  },
+  "homepage": "https://github.com/Ingalls12/Picross_project#readme"
 }

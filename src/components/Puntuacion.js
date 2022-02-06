@@ -9,14 +9,14 @@ export default function Puntuacion(){
     const [corazones,setCorazones] = useState([1,1,1]);
     const vidas = corazones.map((e,i)=>{
         return(
-            <span key = {i}><img className="corazon" src="/img/corazon.png"/></span>
+            <span key = {i}><img alt="corazon" className="corazon" src="/img/corazon.png"/></span>
         )
     });
     useEffect(()=>{
         if(valor.vidas===3&&valor.puntos===0){
            setCorazones([1,1,1])
         }else{
-            setCorazones(corazones.slice(-3,-1))
+            setCorazones(corazones.slice(-3,-1));
         }
        
        

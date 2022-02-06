@@ -14,7 +14,7 @@ export default function Grilla(){
     const state = useContext(poinstContext);
     const dispatcher = state.setPuntaje;
     const puntos = state.puntaje;
-    const [array, arrayDispatcher] = useReducer(listaReducer,listaReducer())
+    const [array, arrayDispatcher] = useReducer(listaReducer,listaReducer());
     function new_Puzzle(){
         borrar()
         arrayDispatcher({type:"NEW"});
@@ -39,7 +39,7 @@ export default function Grilla(){
         if(puntos.vidas<1&&puntos.puntos < puntosTotales){
             setPerdiste(true);
         }
-    },[puntos.puntos,puntos.vidas])
+    },[puntos.puntos,puntos.vidas]);
     return(
         <>
             <div className="juego">

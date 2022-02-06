@@ -1,4 +1,4 @@
-import { useReducer, useState } from "react";
+import { useReducer } from "react";
 import Grilla from "./components/Grilla";
 import { puntacionReducer } from "./reducers/puntuacionReducer";
 import "./styles/app.css";

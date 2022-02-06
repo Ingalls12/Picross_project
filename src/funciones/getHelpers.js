@@ -2,9 +2,9 @@ function separacion(lista){
     let contenido_x = []
     for(let x=0;x<lista.length;x=x+10){
         let n_lista = lista.slice(x,x+10);
-        contenido_x.push(n_lista)
+        contenido_x.push(n_lista);
     }
-    return contenido_x
+    return contenido_x;
 }
 function transpuesta(lista){
     let array = lista[0].map((col, i) => lista.map(row => row[i]));

@@ -2,14 +2,11 @@ import React,{useContext, useState} from 'react';
 import "../styles/Cuadrado-Style.css";
 import { poinstContext } from './context/pointsContext';
 export default function Cuadrado(props){
-    let fondo = "#567E7E"
-    //let color = "#131A1A";
-    let color = "#045858"
-    let error = "#83062C"
-    const[valor, setValor] =  useState("");
+  
+    let color = "#045858";
+    let error = "#83062C";
     const[activo,setActivo] = useState(false);
     const state = useContext(poinstContext);
-    const res = state.puntaje;
     const dispatcher = state.setPuntaje;
 
     function isCorrect(e){
@@ -59,7 +56,6 @@ export default function Cuadrado(props){
     }
     return(
         <div className="cuadrado" onClick={handleChange} onContextMenu={handleRigthChange} value={props.value} >
-            <p>{valor}</p>
         </div>
     )
 }
