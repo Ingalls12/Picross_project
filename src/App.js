@@ -5,6 +5,7 @@ import "./styles/app.css";
 import Puntuacion from "./components/Puntuacion";
 import { poinstContext } from "./components/context/pointsContext";
 import Instrucciones from "./components/Instrucciones";
+import Footer from "./components/Footer";
 function App() {
   const [puntaje,setPuntaje] = useReducer(puntacionReducer,puntacionReducer());
   return (
@@ -16,6 +17,7 @@ function App() {
         </div>
         <Puntuacion />
         <Instrucciones/>
+        <Footer/>
       </div>
     </poinstContext.Provider>
   );
