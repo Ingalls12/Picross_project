@@ -1,0 +1,7 @@
+.puntuacion{
+    display: flex;
+    flex-direction: column;
+}
+.corazon{
+    width: 20px;
+}

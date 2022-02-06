@@ -20,7 +20,8 @@ export default function Grilla(){
         arrayDispatcher({type:"NEW"});
         dispatcher({type:"NEW_GAME"});
     }   
-    useEffect(new_Puzzle,[])
+    useEffect(new_Puzzle,[]);
+
     function borrar(){
         setGanaste(false);
         setPerdiste(false);
