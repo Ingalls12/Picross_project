@@ -110,4 +110,6 @@
     font-size: 3em;
     float: right;
     transition: transform 1000ms;
+    transform: translateX(50%);
 }
+

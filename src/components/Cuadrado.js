@@ -3,7 +3,8 @@ import "../styles/Cuadrado-Style.css";
 import { poinstContext } from './context/pointsContext';
 export default function Cuadrado(props){
     let fondo = "#567E7E"
-    let color = "#131A1A";
+    //let color = "#131A1A";
+    let color = "#045858"
     let error = "#83062C"
     const[valor, setValor] =  useState("");
     const[activo,setActivo] = useState(false);

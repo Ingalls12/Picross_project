@@ -10,7 +10,7 @@ function App() {
   return (
     <poinstContext.Provider value={{puntaje,setPuntaje}}>
       <div className="App">
-        <h1 className="titulo">Picross</h1>
+        <h1 className="titulo"><span className="inicial">X</span>Picross</h1>
         <div className="principal">
           <Grilla />
         </div>
